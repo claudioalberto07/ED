@@ -14,10 +14,10 @@ private:
     int maxTam;
     int topo;
 public:
-    PilhaE(){
+    PilhaE(int tam){
         topo = -1;
-        vet = new int[100];
-        maxTam = 99;
+        vet = new Type[tam];
+        maxTam = tam-1;
     }
     ~PilhaE() {
         delete []vet;
@@ -29,12 +29,14 @@ public:
     void pop(){
         topo--;
     }
-    int getTopo(){
+    Type getTopo(){
         return vet[topo];
     }
 
     bool vazia(){
-
+        if(topo == -1)
+            return  true;
+        return false;
     }
 
 };

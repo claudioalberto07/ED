@@ -55,8 +55,8 @@ build CMakeFiles/ED.dir/main.cpp.obj: CXX_COMPILER__ED_Debug C$:/Users/SESI/CLio
   OBJECT_DIR = CMakeFiles\ED.dir
   OBJECT_FILE_DIR = CMakeFiles\ED.dir
 
-build CMakeFiles/ED.dir/Pilha.cpp.obj: CXX_COMPILER__ED_Debug C$:/Users/SESI/CLionProjects/ED/Pilha.cpp || cmake_object_order_depends_target_ED
-  DEP_FILE = CMakeFiles\ED.dir\Pilha.cpp.obj.d
+build CMakeFiles/ED.dir/PilhaE.cpp.obj: CXX_COMPILER__ED_Debug C$:/Users/SESI/CLionProjects/ED/PilhaE.cpp || cmake_object_order_depends_target_ED
+  DEP_FILE = CMakeFiles\ED.dir\PilhaE.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\ED.dir
   OBJECT_FILE_DIR = CMakeFiles\ED.dir
@@ -69,7 +69,7 @@ build CMakeFiles/ED.dir/Pilha.cpp.obj: CXX_COMPILER__ED_Debug C$:/Users/SESI/CLi
 #############################################
 # Link the executable ED.exe
 
-build ED.exe: CXX_EXECUTABLE_LINKER__ED_Debug CMakeFiles/ED.dir/main.cpp.obj CMakeFiles/ED.dir/Pilha.cpp.obj
+build ED.exe: CXX_EXECUTABLE_LINKER__ED_Debug CMakeFiles/ED.dir/main.cpp.obj CMakeFiles/ED.dir/PilhaE.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ED.dir

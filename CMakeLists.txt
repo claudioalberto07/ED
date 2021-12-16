@@ -3,4 +3,4 @@ project(ED)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(ED main.cpp PilhaE.cpp PilhaE.h)
+add_executable(ED main.cpp PilhaE.h)

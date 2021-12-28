@@ -5,6 +5,11 @@
 #ifndef ED_PILHAE_H
 #define ED_PILHAE_H
 
+/*
+ * Implementação de Pilha estática com objetivo de praticar
+ * a linguagem C++  com paradigma de orientação a objetos.
+ */
+
 template <class Type>
 
 class PilhaE {

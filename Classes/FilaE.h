@@ -2,17 +2,17 @@
 // Created by SESI on 28/12/2021.
 //
 
-#ifndef ED_FILA_H
-#define ED_FILA_H
+#ifndef ED_FILAE_H
+#define ED_FILAE_H
 
 /*
- * Implementação de Fila estática com objetivo de praticar
+ * Implementação de FilaE estática com objetivo de praticar
  * a linguagem C++  com paradigma de orientação a objetos.
  */
 
 template <class Type>
 
-class Fila {
+class FilaE {
 
 private:
     Type *vet;
@@ -20,13 +20,13 @@ private:
     int tamMax;
     int fim;
 public:
-    Fila(int tam){
+    FilaE(int tam){
         this->tamMax = tam - 1;
         this->fim = 0;
         this->inicio = 0;
         this->vet = new Type[tam];
     }
-    ~Fila(){
+    ~FilaE(){
         delete [] vet;
     }
     Type push(){
@@ -39,4 +39,4 @@ public:
 };
 
 
-#endif //ED_FILA_H
+#endif //ED_FILAE_H

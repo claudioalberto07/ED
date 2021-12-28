@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Classes/PilhaE.h"
-#include "Classes/Fila.h"
+#include "Classes/FilaE.h"
 
 int main() {
 
@@ -14,7 +14,7 @@ int main() {
     p.pop();
     std::cout << p.getTopo() << std::endl;
 
-    Fila<int> fila(3);
+    FilaE<int> fila(3);
     fila.put(5);
     fila.put(10);
     fila.put(20);

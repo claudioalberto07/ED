@@ -16,16 +16,17 @@
 
 using namespace std;
 
+template<class T>
 class No{
 private:
-    int v;
+    T v;
     No *prox;
 public:
-    No(int v){
+    No(T v){
         this->prox = NULL;
         this->v = v;
     }
-    int obterValor(){
+    T obterValor(){
         return this->v;
     }
     No* obterProx(){
@@ -36,17 +37,18 @@ public:
     }
 };
 
+template<class T>
 class ListaEncadeada {
 private:
-    No *inicio;
-    No *fim;
+    No<T> *inicio;
+    No<T> *fim;
 public:
     ListaEncadeada(){
         this->inicio = NULL;
         this->fim = NULL;
     }
-    ListaEncadeada(int v){
-        this->inicio = new No(v);
+    ListaEncadeada(T v){
+        this->inicio = new No<T>(v);
         this->fim = this->inicio;
     }
     virtual ~ListaEncadeada(){
@@ -55,7 +57,7 @@ public:
 
     void mostrar(){
         std::cout << "Exibindo a lista: " << endl;
-        No *c = this->inicio;
+        No<T> *c = this->inicio;
 
         if(isVazia())
             std::cout << "Lista vazia!" << endl;
@@ -68,15 +70,15 @@ public:
         }
     }
 
-    void insertInicio(int v){
-        No *novoNo = new No(v);
+    void insertInicio(T v){
+        No<T> *novoNo = new No<T>(v);
         novoNo->setProx(inicio);
         inicio = novoNo;
 
     }
 
-    void insertFinal(int v){
-        No *novoNo = new No(v);
+    void insertFinal(T v){
+        No<T> *novoNo = new No<T>(v);
 
         if(isVazia()) {
             this->inicio = novoNo;
@@ -95,7 +97,7 @@ public:
     int tamanhoLista(){
         if (isVazia())
             return 0;
-        No *c = this->inicio;
+        No<T> *c = this->inicio;
         int tam = 0;
         do {
             c = c->obterProx();
@@ -105,8 +107,8 @@ public:
     }
 
 
-    bool existValue(int v){
-        No *c = this->inicio;
+    bool existValue(T v){
+        No<T> *c = this->inicio;
         while (c){
             if(c->obterValor() == v)
                 return true;
@@ -125,12 +127,12 @@ public:
                 this->inicio->setProx(NULL);
             // se houver mais de dois elementos
             else{
-                No *ant_annt = this->inicio;
-                No *ant = this->inicio->obterProx();
-                No *corrente = this->inicio->obterProx()->obterProx();
+                No<T> *ant_annt = this->inicio;
+                No<T> *ant = this->inicio->obterProx();
+                No<T> *corrente = this->inicio->obterProx()->obterProx();
 
                 while (corrente){
-                    No *aux = ant;
+                    No<T> *aux = ant;
                     ant  = corrente;
                     ant_annt = aux;
                     corrente = corrente->obterProx();

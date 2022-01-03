@@ -25,32 +25,32 @@ int main() {
     std::cout << fila.push() << std::endl;
 
 
-    ListaEncadeada l;
+    ListaEncadeada<string> l;
     if(l.isVazia())
         std::cout <<"Lista vazia" << std::endl;
 
     l.mostrar();
-    cout << l.existValue(10) << endl;
+    cout << l.existValue("10") << endl;
 
-    l.insertFinal(10);
-    l.insertFinal(20);
-    l.insertFinal(30);
-
-    l.mostrar();
-    cout << l.existValue(10) << endl;
-
-    l.insertInicio(5);
-    l.insertInicio(6);
+    l.insertFinal("10");
+    l.insertFinal("20");
+    l.insertFinal("30");
 
     l.mostrar();
-    cout << l.existValue(10) << endl;
+    cout << l.existValue("10") << endl;
+
+    l.insertInicio("gggg");
+    l.insertInicio("kkkk");
+
+    l.mostrar();
+    cout << l.existValue("lll") << endl;
 
     cout << l.tamanhoLista() << endl;
 
     l.removeBack();
     cout << l.tamanhoLista() << endl;
     l.mostrar();
-    cout << l.existValue(10) << endl;
+    cout << l.existValue("hjjhgf") << endl;
 
 
     return 0;

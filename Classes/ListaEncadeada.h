@@ -8,8 +8,8 @@
 #include <iostream>
 
 /*
- * Lista simplesmente encadeada e tipada para inteiros.
- * logo mais adaptando para colocar tipos dinãmicos de
+ * Lista simplesmente encadeada e adaptada
+ * para aceitar tipos dinãmicos de
  * dados através do template.
  */
 
